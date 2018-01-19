@@ -1,0 +1,76 @@
+﻿@model IEnumerable<BilisimEgitimAnket.Models.Kelime>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.GID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SARI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KIRMIZI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MAVI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YESIL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DURUM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OTAR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GTAR)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.GID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SARI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KIRMIZI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MAVI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YESIL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DURUM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OTAR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GTAR)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,83 @@
+﻿@model BilisimEgitimAnket.Models.Kelime
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Kelime</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.GID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SARI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SARI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KIRMIZI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KIRMIZI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MAVI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MAVI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YESIL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YESIL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DURUM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DURUM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OTAR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OTAR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GTAR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GTAR)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

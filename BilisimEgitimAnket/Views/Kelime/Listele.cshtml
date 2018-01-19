@@ -1,0 +1,88 @@
+﻿@model BilisimEgitimAnket.Models.Kelime
+
+@{
+    ViewBag.Title = "Listele";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<h2>Listele</h2>*@
+
+<div ng-app="Myapp">
+    <div ng-controller="myController">
+        <h2>Listele</h2>
+        <p>
+            @Html.ActionLink("Kelime Kayıt", "Create")
+        </p>
+        Göster :
+        <input type="checkbox" ng-model="Gizle" />
+        Ara :
+        <input ng-model="ara" />
+        <table class="table table-bordered table-striped table-condensed flip-content">
+            <thead class="flip-content">
+                <tr>
+                    <th class="text-nowrap all">Gid</th>
+                    <th class="text-nowrap" ng-click="veriSirala('Sari')">
+                        <div ng-class="siralaClass('Sari')" class="text-nowrap">SARI</div>
+                    </th>
+                    <th class="text-nowrap" ng-click="veriSirala('Sari')">
+                        <div ng-class="siralaClass('Sari')" class="text-nowrap">KIRMIZI</div>
+                    </th>
+                    <th class="text-nowrap" ng-click="veriSirala('Sari')">
+                        <div ng-class="siralaClass('Sari')" class="text-nowrap">MAVİ</div>
+                    </th>
+                    <th class="text-nowrap" ng-click="veriSirala('Sari')">
+                        <div ng-class="siralaClass('Sari')" class="text-nowrap">YEŞİL</div>
+                    </th>
+                    <th class="text-nowrap">DURUM</th>
+                    <th ng-hide="!Gizle" class="text-nowrap">OTAR</th>
+                    <th ng-hide="!Gizle" class="text-nowrap">GTAR</th>
+                    <th data-orderable="false" class="all">İşlemler</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in items | orderBy:sutunSirala:cevir | filter:ara">
+                    <td>{{item.GID}}</td>
+                    <td class="Sari">{{item.SARI}}</td>
+                    <td class="Kirmizi">{{item.KIRMIZI}}</td>
+                    <td class="Mavi">{{item.MAVI}}</td>
+                    <td class="Yesil">{{item.YESIL}}</td>
+                    <td>{{item.DURUM}}</td>
+                    <td ng-hide="!Gizle">{{item.OTAR.slice(6,2) | date:'dd-MM-yyyy'}}</td>
+                    <td ng-hide="!Gizle">{{item.GTAR.slice(6,2) | date:'dd-MM-yyyy'}}</td>
+                    <td>
+                        <a class="btn btn-sm btn-primary" href="~/Kelime/Edit/{{item.ID}}">Düzenle</a> |
+                        <a class="btn btn-sm btn-success" href="~/Kelime/Detay/{{item.ID}}">Detaylar</a> |
+                        <a class="btn btn-sm btn-danger" href="~/Kelime/Delete/{{item.ID}}">Sil</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+@section scripts
+{
+<script>
+    var myApp = angular.module("Myapp", []);
+    myApp.controller("myController", function ($scope, $http) {
+        //$scope.school = "Sinop Atatürk Lisesi";
+        $http.get("Kliste").then(function (event) {
+            $scope.items = event.data;
+            console.log(event.data);
+        });
+        $scope.sutunSirala = "Sari";
+        $scope.cevir = false;
+
+        $scope.veriSirala = function (sutun) {
+            $scope.cevir = ($scope.sutunSirala == sutun) ? !$scope.cevir : false;
+            $scope.sutunSirala = sutun;
+        }
+        $scope.siralaClass = function (sutun) {
+            if ($scope.sutunSirala == sutun) {
+                return $scope.cevir ? 'azalan' : 'artan';
+            }
+            return '';
+        }
+    });
+</script>
+    }
+@Styles.Render("~/Content/my/css")

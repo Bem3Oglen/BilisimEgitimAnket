@@ -1,0 +1,113 @@
+﻿@model BilisimEgitimAnket.Models.Firma
+
+@{
+    ViewBag.Title = "Firma Sil";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Firma Sil</h2>
+
+<h3>Bu kaydı silmek istediğinize emin misiniz?</h3>
+<div>
+    <h4>Firma Sil</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FADI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FADI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FADRES)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FADRES)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YETKILI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YETKILI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TEL1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TEL1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TEL2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TEL2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GSM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GSM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FAKS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FAKS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EMAIL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMAIL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ACIKLAMA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ACIKLAMA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OTAR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OTAR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GTAR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GTAR)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-default" /> |
+            @Html.ActionLink("Listeye Geri Dön", "Index")
+        </div>
+    }
+</div>

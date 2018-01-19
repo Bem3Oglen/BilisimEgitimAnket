@@ -1,0 +1,28 @@
+﻿.createsitil{
+    text-align:center;
+    text-transform:uppercase;
+    font-weight:bold;
+    font-size:200%;
+    font-family:Roboto,'Arial Narrow', Arial, sans-serif;
+    height:auto;
+}
+.Yesil{
+    margin-left:2px;
+    margin-right:2px;
+    padding-left:2px;
+    padding-right:2px;
+    background-color:rgba(102,255,0,0.5);
+    border:2px solid rgb(102,255,0);
+}
+.Mavi {
+    background-color: rgba(102,255,255,0.5);
+    border: 2px solid rgb(102,255,255);
+}
+.Sari {
+    background-color: rgba(255,255,0,0.5);
+    border: 2px solid rgb(255,255,0);
+}
+.Kirmizi {
+    background-color: rgba(255,0,30,0.5);
+    border: 2px solid rgb(255,0,30);
+}
