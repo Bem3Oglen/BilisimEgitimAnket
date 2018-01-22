@@ -197,7 +197,11 @@
     <Compile Include="Controllers\FirmaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KelimeController.cs" />
+    <Compile Include="Controllers\KIRMIZIController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MAVIController.cs" />
+    <Compile Include="Controllers\SARIController.cs" />
+    <Compile Include="Controllers\YESILController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -5579,6 +5583,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\master.css" />
     <Content Include="Content\my\myAnk.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\styleGiris.css" />
@@ -6797,6 +6802,26 @@
     <Content Include="Views\Kelime\Index.cshtml" />
     <Content Include="Views\Kelime\Listele.cshtml" />
     <Content Include="Scripts\version.json" />
+    <Content Include="Views\KIRMIZI\Create.cshtml" />
+    <Content Include="Views\KIRMIZI\Delete.cshtml" />
+    <Content Include="Views\KIRMIZI\Details.cshtml" />
+    <Content Include="Views\KIRMIZI\Edit.cshtml" />
+    <Content Include="Views\KIRMIZI\Index.cshtml" />
+    <Content Include="Views\MAVI\Create.cshtml" />
+    <Content Include="Views\MAVI\Delete.cshtml" />
+    <Content Include="Views\MAVI\Details.cshtml" />
+    <Content Include="Views\MAVI\Edit.cshtml" />
+    <Content Include="Views\MAVI\Index.cshtml" />
+    <Content Include="Views\SARI\Create.cshtml" />
+    <Content Include="Views\SARI\Delete.cshtml" />
+    <Content Include="Views\SARI\Details.cshtml" />
+    <Content Include="Views\SARI\Edit.cshtml" />
+    <Content Include="Views\SARI\Index.cshtml" />
+    <Content Include="Views\YESIL\Create.cshtml" />
+    <Content Include="Views\YESIL\Delete.cshtml" />
+    <Content Include="Views\YESIL\Details.cshtml" />
+    <Content Include="Views\YESIL\Edit.cshtml" />
+    <Content Include="Views\YESIL\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
